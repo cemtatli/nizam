@@ -1,3 +1,1 @@
-export * from "./api-types"
-export * from "./metadata"
-export * from "./post-type"
+export type { UserType } from "./user.type";

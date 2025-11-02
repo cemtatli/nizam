@@ -1,119 +1,168 @@
-# Next.js Boilerplate
+# Nizam — A Modern Next.js 16 Boilerplate
 
-Modern **Next.js 15.3** boilerplate with **TypeScript** & **Tailwind CSS**
+A production-ready **Next.js 16** boilerplate designed for scalability, performance, and developer happiness.
 
-Live Demo: https://nextjs15-boilerplate.vercel.app/en
+> **Nizam** is a Turkish word that means _"structure, organization, and harmony.”_
+
+![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)
+![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?logo=reactquery&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-3B82F6?logo=react&logoColor=white)
 
 ## Features
 
-With this template, you get all the awesomeness you need:
+- [Next.js 16](https://nextjs.org/) and [React 19](https://react.dev/) with App Router and concurrent rendering
+- [TypeScript 5](https://www.typescriptlang.org/) for full type safety
+- [Tailwind CSS v4](https://tailwindcss.com/) for scalable and fast styling
+- [TanStack Query 5](https://tanstack.com/query/latest) for data fetching and caching
+- [Zustand](https://zustand-demo.pmnd.rs) for lightweight global state management
+- [Zod](https://zod.dev/) + [@t3-oss/env-nextjs](https://env.t3.gg) for runtime validation
+- [next-intl](https://next-intl-docs.vercel.app) for internationalization
+- [Next Themes](https://github.com/pacocoursey/next-themes) for dynamic light/dark modes
+- [Lucide](https://lucide.dev) icons and [Sonner](https://sonner.emilkowal.ski) for notifications
+- [Google Analytics](https://analytics.google.com/) integration
+- [ESLint 9](https://eslint.org/), [Prettier 3](https://prettier.io/), [Husky](https://github.com/typicode/husky), [lint-staged](https://github.com/okonet/lint-staged), and [Knip](https://knip.dev) for code quality
+- SEO-ready with metadata, sitemap, and robots.txt generation
+- Bundler Analyzer
+- Absolute Imports using `@` prefix
+- Maximize lighthouse score
 
-- 📂 Advanced Folder Structures
-- ⚡ [Next.js](https://nextjs.org/) with App Router support
-- 💎 Type checking [TypeScript](https://www.typescriptlang.org/)
-- 🎨 Styled using [Tailwind CSS](https://tailwindcss.com/)
-- 📦 State management with [Zustand](https://zustand-demo.pmnd.rs/)
-- 🗺️ [next-intl](https://next-intl.dev/) for internationalization
-- 🧩 UI Components built with [shadcn/ui](https://ui.shadcn.com/)
-- 🔄 Data Fetching, Caching and Mutation with [TanStack Query](https://tanstack.com/query/latest)
-- ⌨️ Form handling with [React Hook Form](https://react-hook-form.com/)
-- 🔴 Validation library with [Zod](https://zod.dev/)
-- 🌸 Smart masking and validation with [@omergulcicek/forms](https://www.npmjs.com/package/@omergulcicek/forms)
-- 🧹 Linter with [ESLint](https://eslint.org/)
-- 💖 Code Formatter with [Prettier](https://prettier.io/)
-- 🎉 [Storybook](https://storybook.js.org/) for UI development
-- 🚨 Error tracking with [Sentry](https://sentry.io/)
-- 📊 Analytics with [Google Analytics](https://analytics.google.com/)
-- ⏳ Loading UI using [Skeleton Components](https://ui.shadcn.com/docs/components/skeleton)
-- 🌓 Dark theme with [next-themes](https://npmjs.com/package/next-themes)
-- 💡 [Absolute Imports](https://nextjs.org/docs/pages/building-your-application/configuring/absolute-imports-and-module-aliases) with `@` prefix
-- ✨ Beautiful and consistent icons from [Lucide](https://lucide.dev/)
-- 🐶 [Husky](https://typicode.github.io/husky/) for Git Hooks
-- 🤖 Sitemap.xml and robots.txt
-- ⚙️ Metadata files optimized for SEO
-- 🍪 Storage helpers for Local, Session, Cookies
-- 💯 Maximize lighthouse score
+## Getting Started
 
-## Project structure
+To run this project locally, follow the steps below.
 
-```shell
-│
-├── .husky                          # Husky git hook scripts
-├── messages                        # i18n messages
-├── public                          # Public assets folder
-├── src
-│   ├── app                         # Next JS App (App Router)
-│   ├── assets                      # Static assets (images, fonts, etc.)
-│   ├── components                  # React components
-│   │   ├── icons                   # svg icons
-│   │   ├── features                # Components with hooks and calculations
-│   │   ├── shared                  # Header, footer, aside components
-│   │   ├── skeletons               # Loading components
-│   │   ├── ui                      # Atomic components
-│   │   └── widgets                 # Advanced UI components
-│   ├── constants                   # Project-wide constants
-│   ├── data                        # Static or mock data
-│   ├── helpers                     # Reusable utility functions (e.g., API, formatting, storage)
-│   ├── hooks                       # Reusable custom React hooks
-│   ├── i18n                        # Internationalization setup
-│   ├── lib                         # Common utility functions
-│   ├── providers                   # Global context providers (theme, data fetching, notifications, i18n)
-│   ├── schemas                     # Validation schemas
-│   ├── services                    # API request functions
-│   ├── stores                      # Global state
-│   ├── types                       # TypeScript type definitions
-│   └── .middleware                 # Middleware for Next.js
-├── .env                            # Environment variables
-├── .gitignore                      # Git ignore rules
-├── .prettierrc                     # Prettier config
-├── components.json                 # shadcn/ui config
-├── eslint.config.mjs               # ESLint config
-├── next.config.mjs                 # Next.js config
-├── package.json                    # Project dependencies and scripts
-├── postcss.config.js               # PostCSS config
-├── README.md                       # README file
-├── tailwind.config.js              # Tailwind CSS config
-└── tsconfig.json                   # TypeScript config
+### Requirements
+
+- Node.js 22+ and npm (or pnpm/yarn)
+
+### Installation
+
+```bash
+git clone --depth=1 https://github.com/omergulcicek/nizam my-project
+cd my-project
+npm install
+npm run dev
 ```
 
-## File Naming Conventions
+Open http://localhost:3000 in your browser.
 
-The project follows consistent file naming conventions:
+### Environment Variables
 
-| File Type      | Example          | Style      |
-| -------------- | ---------------- | ---------- |
-| Component      | `LoginForm.tsx`  | PascalCase |
-| Hook           | `useLogin.ts`    | camelCase  |
-| Helper, Schema | `form-schema.ts` | kebab-case |
-| Folder         | `login-form/`    | kebab-case |
-| Constants      | `ALPHA_REGEX`    | SNAKE_CASE |
-
-## Monitoring & Analytics
-
-🚧 Don't forget to replace all FIXME tags with proper code before finalizing the changes.
-
-### Error Tracking
-
-We use [Sentry](https://sentry.io/) for error tracking and performance monitoring. To set up:
-
-1. Create a Sentry account
-2. Add your DSN to `.env`:
+The project uses some variables validated at runtime. Create a `.env` file in the root and define at least the following:
 
 ```env
-NEXT_PUBLIC_SENTRY_DSN=your-sentry-dsn
-```
-
-### Analytics
-
-We use [Google Analytics](https://analytics.google.com/) for tracking user behavior. To set up:
-
-1. Create a Google Analytics account
-2. Add your ID to `.env`:
-
-```env
+NEXT_PUBLIC_SITE_URL=https://localhost:3000
+NEXT_PUBLIC_API_URL=https://api.example.com
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 ```
 
-### Contributors
+The variable schema is defined in `src/env.ts`.
 
-- [@omergulcicek](https://github.com/omergulcicek)
+---
+
+## Customization
+
+You can quickly tailor the Next.js Boilerplate to your needs by searching the project for `FIXME:` tags.
+
+- `.env`: runtime environment variables
+- `src/env.ts`: environment variables schema (required/optional fields)
+- `src/app/robots.ts`: Robots.txt configuration for search engines
+- `src/app/sitemap.ts`: Dynamic sitemap generation for SEO
+- `src/config/site.ts`: site name, description, URL, social accounts, default locales
+- `src/config/seo.ts`: Metadata-based SEO settings (title, description, Open Graph, Twitter)
+- `src/constants/i18n.ts`: Localization settings (supported and default locales)
+- `src/lib/api.ts`: Axios instance and request helpers based on `NEXT_PUBLIC_API_URL`
+
+---
+
+## Project structure
+
+```
+├── public/                             # Public assets folder
+├── src/
+│   ├── app/                            # App Router with locale support
+│   ├── assets/                         # Static and vector assets
+│   ├── components/                     # UI and shared components
+│   │   ├── features                    # Components with logic and hooks
+│   │   ├── layouts                     # Page structure (header, footer, sidebar)
+│   │   ├── ui                          # Atomic and reusable UI elements
+│   │   └── widgets                     # Presentational components without logic
+│   ├── config/                         # Site and SEO configurations
+│   ├── constants/                      # Global constants (i18n, date, etc.)
+│   ├── hooks/                          # Custom React hooks
+│   ├── i18n/                           # next-intl configurations
+│   ├── lib/                            # Utilities and API layer
+│   ├── messages/                       # Translation files (JSON)
+│   ├── providers/                      # App-wide providers (Theme, Query, Intl)
+│   ├── schemas/                        # Zod validation schemas
+│   ├── stores/                         # Application-wide state management
+│   ├── styles/                         # Base styling and Tailwind setup
+│   ├── types/                          # TypeScript types and interfaces
+│   └── .env.ts                         # Environment validation
+├── .prettierrc                         # Prettier setup with Tailwind and import sorting
+├── next.config.ts                      # Next.js configuration
+└── tsconfig.json                       # TypeScript configuration
+```
+
+---
+
+## Naming Conventions
+
+| Type                               | Example                              | Style                        |
+| ---------------------------------- | ------------------------------------ | ---------------------------- |
+| Folders & base files               | `locale-switcher`, `query-client.ts` | kebab-case                   |
+| Components (widgets/layouts/pages) | `UserList.tsx`                       | PascalCase                   |
+| UI elements                        | `button.tsx`                         | kebab-case                   |
+| Helper / util files                | `format-currency.ts`                 | kebab-case                   |
+| Hook files                         | `use-users.ts`                       | kebab-case                   |
+| Hook functions                     | `useUsers`                           | camelCase (prefix `use`)     |
+| Stores                             | `counter.store.ts`                   | kebab-case (suffix `.store`) |
+| Types & interfaces                 | `UserType`                           | PascalCase (suffix `Type`)   |
+| Type files                         | `user.type.ts`                       | kebab-case (suffix `.type`)  |
+| Constants                          | `DEFAULT_LOCALE`                     | SNAKE_CASE                   |
+
+## Useful commands
+
+### Development
+
+- `npm run dev`: starts the development server
+- `npm run build`: production build
+- `npm run start`: starts the production server
+- `npm run clean`: cleans the `.next` directory
+
+### Code quality and validation
+
+- `npm run lint`: checks lint errors
+- `npm run lint:fix`: auto-fixes fixable lint issues and formats
+- `npm run lint:ci`: runs lint in CI mode (no warnings allowed) and checks formatting
+- `npm run format`: formats with Prettier
+- `npm run format:check`: checks formatting
+- `npm run typecheck`: verifies type safety
+- `npm run knip`: analyzes unused dependencies and files
+
+### Git hooks
+
+- `npm run prepare`: sets up git hooks via Husky
+
+### Bundle Analyzer
+
+To analyze build outputs:
+
+- `npm run analyze`: analyzes bundle sizes and opens the report
+
+### Conventional Commits
+
+This project enforces the Conventional Commits specification. All commit messages must follow the standard. You can use the interactive CLI:
+
+```bash
+npm run commit
+```
+
+Benefits include automatic release notes and semantic versioning based on commit types.
+
+---
+
+Created by [Ömer Gülçiçek](https://github.com/omergulcicek)  
+Support: buy me a coffee or sponsor via email: iletisim@omergulcicek.com

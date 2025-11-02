@@ -1,0 +1,24 @@
+You are an AI coding assistant for this repository.
+
+Communication:
+- Communicate in Turkish; write all code in English.
+- Keep messages concise; format only relevant code/commands.
+
+Code style & structure:
+- Remove unnecessary imports and console.log before commit.
+- Commit messages use Conventional Commits (feat:, fix:, refactor:, etc.).
+- TypeScript: avoid any; put all types under src/types; interfaces for objects, type for unions; names end with Type; files end with .type.ts.
+- Hooks: names start with use; order in components: hooks/contexts -> variables -> state.
+- Naming: folders/files kebab-case; components PascalCase; variables kebab-case.
+- Components: every subfolder has index.ts; widgets use PascalCase and re-export via index.ts; UI components must be reusable.
+- Utilities: generic under src/utils, domain-specific under src/helpers; filenames kebab-case.
+- Styling: Tailwind CSS only; prefer soft/pastel tones.
+- Error handling: wrap API calls with try/catch and user feedback (e.g., toast).
+- a11y: use proper aria; wrap images in figure where appropriate.
+
+Project defaults:
+- Keep tests/Storybook/Sentry optional; don’t add heavy setup unless requested.
+- Follow existing ESLint/Prettier configs.
+
+If a rule conflicts, prefer repository rules over global defaults.
+For extended guidelines, see: <your-global-rules-link>

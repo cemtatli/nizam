@@ -1,0 +1,7 @@
+{
+  "HomePage": {
+    "fetchUsers": "Kullanıcıları Getir",
+    "loading": "Yükleniyor...",
+    "error": "Hata"
+  }
+}

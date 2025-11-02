@@ -1,0 +1,7 @@
+{
+  "HomePage": {
+    "fetchUsers": "Fetch Users",
+    "loading": "Loading...",
+    "error": "Error"
+  }
+}

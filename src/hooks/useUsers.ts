@@ -1,15 +1,12 @@
-import { useQuery } from "@tanstack/react-query"
+import { useQuery } from "@tanstack/react-query";
 
-import { UserType } from "@/types"
+import { get } from "@/lib/api";
 
-import { usersService } from "@/services/users-service"
+import { UserType } from "@/types";
 
-export const useUsers = () => {
-	return useQuery<UserType[]>({
-		queryKey: ["users"],
-		queryFn: async () => {
-			const response = await usersService.getUsers()
-			return response.data
-		}
-	})
+export function useUsers() {
+  return useQuery({
+    queryKey: ["users"],
+    queryFn: ({ signal }) => get<UserType[]>("/users", { signal })
+  });
 }

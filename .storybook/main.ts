@@ -1,16 +1,23 @@
-import type { StorybookConfig } from "@storybook/nextjs"
+import { type StorybookConfig } from "@storybook/nextjs-vite";
+import react from "@vitejs/plugin-react";
+import { mergeConfig } from "vite";
 
 const config: StorybookConfig = {
-	stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-	addons: [
-		"@chromatic-com/storybook",
-		"@storybook/addon-docs",
-		"@storybook/addon-a11y"
-	],
-	framework: {
-		name: "@storybook/nextjs",
-		options: {}
-	},
-	staticDirs: ["../public"]
-}
-export default config
+  framework: { name: "@storybook/nextjs-vite", options: {} },
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(ts|tsx)"],
+  addons: ["@storybook/addon-essentials", "@storybook/addon-a11y", "@storybook/addon-docs"],
+  staticDirs: ["../public"],
+
+  viteFinal: async (baseConfig) =>
+    mergeConfig(baseConfig, {
+      plugins: [
+        react({
+          babel: {
+            plugins: [["babel-plugin-react-compiler", {}]]
+          }
+        })
+      ]
+    })
+};
+
+export default config;

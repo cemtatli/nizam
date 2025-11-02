@@ -1,13 +1,11 @@
-import { Actions, Stack, Title } from "@/widgets"
+import { Counter } from "@/components/widgets";
+import NextLogo from "@/assets/icons/next.svg";
 
-export default function Home() {
-	return (
-		<div className="container mx-auto px-4">
-			<div className="flex flex-col items-center justify-center gap-12 mt-20">
-				<Title />
-				<Stack />
-				<Actions />
-			</div>
-		</div>
-	)
+export default async function Home() {
+  return (
+    <section className="flex flex-col items-center justify-center gap-4">
+      <Counter />
+      <NextLogo className="size-40" />
+    </section>
+  );
 }

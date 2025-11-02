@@ -10,7 +10,6 @@
     "**/.parcel-cache": true,
     "**/build": true,
     "**/dist": true,
-    "**/node_modules": true,
-    "**/CVS": true
+    "**/node_modules": true
   }
 }

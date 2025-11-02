@@ -1,13 +1,8 @@
-import type { MetadataRoute } from "next"
+import type { MetadataRoute } from "next";
+
+import { env } from "@/env";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	return [
-		{
-			url: `${process.env.NEXT_PUBLIC_SITE_URL}/`,
-			lastModified: new Date(),
-			changeFrequency: "daily",
-			priority: 0.7
-		}
-		// Add more URLs here
-	]
+  // FIXME: Set base URL and tune changeFrequency/priority; extend with more routes
+  return [{ url: `${env.NEXT_PUBLIC_API_URL}/`, changeFrequency: "weekly", priority: 1 }];
 }
