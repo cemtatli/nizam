@@ -1,4 +1,4 @@
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui";
 
 export function StackList({ data }: { data: { icon: React.ElementType; text: string }[] }) {
   return (

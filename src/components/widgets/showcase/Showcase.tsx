@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 
-import { AuthForm, UserList } from "@/components/widgets";
+import { AuthForm, UserList } from "@/widgets";
 
 export function Showcase() {
   const t = useTranslations("Showcase");

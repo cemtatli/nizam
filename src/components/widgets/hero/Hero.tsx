@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Github } from "lucide-react";
 import { Balancer } from "react-wrap-balancer";
 
-import { Button } from "@/components/ui";
+import { Button } from "@/ui";
 
 type HeroType = {
   title: React.ReactNode;

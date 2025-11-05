@@ -8,10 +8,10 @@ import { Balancer } from "react-wrap-balancer";
 
 import { env } from "@/env";
 
-import { stackData } from "@/data/stack.data";
+import { stackData } from "@/data";
 
-import { Button } from "@/components/ui";
-import { StackList } from "@/components/widgets";
+import { StackList } from "@/widgets";
+import { Button } from "@/ui";
 
 export function Dashboard() {
   const t = useTranslations("Dashboard");

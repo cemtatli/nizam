@@ -12,8 +12,8 @@ import { env } from "@/env";
 
 import { routing } from "@/i18n/routing";
 
-import { Footer, Header } from "@/components/layouts";
-import { Toaster } from "@/components/ui/sonner";
+import { Footer, Header } from "@/layouts";
+import { Toaster } from "@/ui";
 import { Providers } from "@/providers";
 
 import "@/tailwind";

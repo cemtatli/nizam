@@ -1,4 +1,4 @@
-import { Dashboard, FeaturesList, Showcase } from "@/components/widgets";
+import { Dashboard, FeaturesList, Showcase } from "@/widgets";
 
 export default function Home() {
   return (

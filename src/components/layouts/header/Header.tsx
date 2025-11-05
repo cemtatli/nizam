@@ -1,4 +1,4 @@
-import { LocaleSwitcher, ThemeSwitcher } from "@/components/widgets";
+import { LocaleSwitcher, ThemeSwitcher } from "@/widgets";
 
 export const Header = () => {
   return (

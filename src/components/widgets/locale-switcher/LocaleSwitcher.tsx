@@ -8,13 +8,13 @@ import { LocaleCode, LOCALES } from "@/constants/i18n";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { getLocaleLabel } from "@/lib/locale";
 
-import { Button } from "@/components/ui/button";
 import {
+  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
+} from "@/ui";
 
 export function LocaleSwitcher() {
   const router = useRouter();

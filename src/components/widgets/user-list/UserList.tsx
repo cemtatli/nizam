@@ -14,17 +14,9 @@ import {
 import { ArrowUpDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-import { useUsers } from "@/hooks/useUsers";
+import { useUsers } from "@/hooks";
 
-import { Input } from "@/components/ui/input";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow
-} from "@/components/ui/table";
+import { Input, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/ui";
 import type { UserType } from "@/types";
 
 export function UserList() {

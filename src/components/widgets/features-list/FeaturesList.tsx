@@ -2,9 +2,9 @@
 
 import { useTranslations } from "next-intl";
 
-import { getFeaturesData } from "@/data/features.data";
+import { getFeaturesData } from "@/data";
 
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/ui";
 
 export function FeaturesList() {
   const t = useTranslations("Features");

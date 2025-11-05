@@ -7,16 +7,16 @@ import { toast } from "sonner";
 
 import { createAuthSchema, type AuthFormValuesType } from "@/schemas/auth.schema";
 
-import { Button } from "@/components/ui/button";
 import {
+  Button,
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+  FormMessage,
+  Input
+} from "@/ui";
 
 export function AuthForm() {
   const tForm = useTranslations("AuthForm");

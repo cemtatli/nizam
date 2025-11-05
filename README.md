@@ -124,6 +124,21 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
   - `useOnClickOutside`
   - `useCopyToClipboard`
 
+### Imports & Aliases
+
+- Prefer short aliases with barrel exports for consistency and readability:
+  - `@/ui`, `@/widgets`, `@/hooks`, `@/data`, `@/schemas`, `@/layouts`
+- Example:
+
+```ts
+import { useUsers } from "@/hooks";
+
+import { LocaleSwitcher } from "@/widgets";
+import { Button } from "@/ui";
+```
+
+- Longer forms like `@/components/ui` are supported but the short aliases above are recommended.
+
 ## Naming Conventions
 
 The following naming conventions are recommended for the project.
@@ -184,5 +199,8 @@ Benefits include automatic release notes and semantic versioning based on commit
 
 ---
 
-Created by [Ömer Gülçiçek](https://github.com/omergulcicek)  
-Support: [Sponsor on GitHub](https://github.com/sponsors/omergulcicek) or <a href="mailto:iletisim@omergulcicek.com">iletisim@omergulcicek.com</a>
+Created by [Ömer Gülçiçek](https://github.com/omergulcicek)
+
+> If you find this project useful, please consider giving it a ⭐. Issues and PRs are welcome.
+>
+> Support: [Sponsor on GitHub](https://github.com/sponsors/omergulcicek) or <a href="mailto:iletisim@omergulcicek.com">iletisim@omergulcicek.com</a>
