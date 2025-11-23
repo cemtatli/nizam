@@ -7,7 +7,7 @@ import { hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 
 import { seoConfig } from "@/config/seo";
-import { siteConfig } from "@/config/site";
+import { SITE_CONFIG } from "@/config/site";
 import { env } from "@/env";
 
 import { routing } from "@/i18n/routing";
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     ...seoConfig,
     alternates: {
       canonical: `/${locale}`,
-      languages: siteConfig.languages
+      languages: SITE_CONFIG.languages
     }
   } satisfies Metadata;
 }

@@ -1,10 +1,4 @@
-export interface SocialLinksType {
-  twitter: string;
-  github: string;
-  linkedin: string;
-}
-
-export interface SiteConfigType {
+export interface SiteConfig {
   name: string;
   description: string;
   url: string;
@@ -12,7 +6,11 @@ export interface SiteConfigType {
   locale: string;
   themeColor: string;
   keywords: string[];
-  social: SocialLinksType;
+  social: {
+    twitter: string;
+    github: string;
+    linkedin: string;
+  };
   ogImage: string;
   languages: Record<string, string>;
 }
