@@ -29,12 +29,13 @@ api.interceptors.response.use(
 
 type Cfg = AxiosRequestConfig & { signal?: AbortSignal };
 
-export const get = async <T>(url: string, config?: Cfg) => (await api.get<T>(url, config)).data;
+export const GET = async <T>(url: string, config?: Cfg) => (await api.get<T>(url, config)).data;
 
-export const post = async <T, B = unknown>(url: string, body?: B, config?: Cfg) =>
+export const POST = async <T, B = unknown>(url: string, body?: B, config?: Cfg) =>
   (await api.post<T>(url, body, config)).data;
 
-export const put = async <T, B = unknown>(url: string, body?: B, config?: Cfg) =>
+export const PUT = async <T, B = unknown>(url: string, body?: B, config?: Cfg) =>
   (await api.put<T>(url, body, config)).data;
 
-export const del = async <T>(url: string, config?: Cfg) => (await api.delete<T>(url, config)).data;
+export const DELETE = async <T>(url: string, config?: Cfg) =>
+  (await api.delete<T>(url, config)).data;

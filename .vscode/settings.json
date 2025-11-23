@@ -11,5 +11,6 @@
     "**/build": true,
     "**/dist": true,
     "**/node_modules": true
-  }
+  },
+  "i18n-ally.localesPaths": ["src/i18n", "src/messages"]
 }
