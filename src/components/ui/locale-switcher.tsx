@@ -22,6 +22,7 @@ export function LocaleSwitcher() {
   const currentLocale = useLocale();
   const locales = Object.keys(LOCALES) as LocaleCode[];
 
+  // If there is only one locale, don't show the switcher
   if (locales.length <= 1) return null;
 
   return (
@@ -40,7 +41,6 @@ export function LocaleSwitcher() {
               disabled={code === (currentLocale as LocaleCode)}
               onClick={() => router.replace(pathname, { locale: code })}
             >
-              <span>{LOCALES[code]?.flag ?? "🏳️"}</span>
               {getLocaleLabel(code, currentLocale as LocaleCode)}
             </DropdownMenuItem>
           ))}

@@ -14,15 +14,11 @@ export const LOCALES = {
   [LANGUAGE.TR]: {
     label: "Türkçe",
     tag: LOCALE.TR,
-    flag: "🇹🇷",
-    dateFormat: "dddd, DD MMMM YYYY",
     timezone: "Europe/Istanbul"
   },
   [LANGUAGE.EN]: {
     label: "English",
     tag: LOCALE.EN,
-    flag: "🇬🇧",
-    dateFormat: "MM/DD/YYYY",
     timezone: "UTC"
   }
 } as const;

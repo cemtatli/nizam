@@ -1,5 +1,6 @@
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 
+import { CONTENT_TYPES } from "@/constants/api";
 import { env } from "@/env";
 
 // FIXME: Set your API base URL and global headers
@@ -7,7 +8,7 @@ export const api = axios.create({
   baseURL: env.NEXT_PUBLIC_API_URL,
   timeout: 10_000,
   headers: {
-    Accept: "application/json"
+    Accept: CONTENT_TYPES.json
   }
 });
 
