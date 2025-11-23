@@ -1,5 +1,7 @@
 import Cookies from "js-cookie";
 
+import { isProduction } from "@/lib/helpers/env";
+
 if (typeof window === "undefined") {
   throw new Error("cookie-client only works on the client");
 }
@@ -11,7 +13,7 @@ export const cookie = {
       expires: days,
       sameSite: "Lax",
       path: "/",
-      secure: process.env.NODE_ENV === "production"
+      secure: isProduction
     }),
   remove: (key: string): void => Cookies.remove(key)
 };

@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 
-import { CONTENT_TYPES } from "@/constants/api";
+import { CONTENT_TYPES, HTTP_STATUS_TEXT } from "@/constants/api";
 import { env } from "@/env";
 
 // FIXME: Set your API base URL and global headers
@@ -23,8 +23,7 @@ api.interceptors.response.use(
   (res) => res,
   (err) => {
     if (axios.isAxiosError(err)) return Promise.reject(err);
-
-    return Promise.reject(new AxiosError("Bilinmeyen hata"));
+    return Promise.reject(new AxiosError(HTTP_STATUS_TEXT.INTERNAL_SERVER_ERROR));
   }
 );
 

@@ -9,7 +9,8 @@
     "url": "https://omergulcicek.com"
   },
   "engines": {
-    "node": "22.x"
+    "node": "22.x",
+    "pnpm": "9.x"
   },
   "scripts": {
     "dev": "next dev",

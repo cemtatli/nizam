@@ -35,15 +35,15 @@ To run this project locally, follow the steps below.
 
 ### Requirements
 
-- Node.js 22+ and npm (or pnpm/yarn)
+- Node.js 22+ and pnpm
 
 ### Installation
 
 ```bash
 git clone --depth=1 https://github.com/omergulcicek/nizam my-project
 cd my-project
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open http://localhost:3000 in your browser.
@@ -162,37 +162,37 @@ The following naming conventions are recommended for the project.
 
 ### Development
 
-- `npm run dev`: starts the development server
-- `npm run build`: production build
-- `npm run start`: starts the production server
-- `npm run clean`: cleans the `.next` directory
+- `pnpm dev`: starts the development server
+- `pnpm build`: production build
+- `pnpm start`: starts the production server
+- `pnpm clean`: cleans the `.next` directory
 
 ### Code quality and validation
 
-- `npm run lint`: checks lint errors
-- `npm run lint:fix`: auto-fixes fixable lint issues and formats
-- `npm run lint:ci`: runs lint in CI mode (no warnings allowed) and checks formatting
-- `npm run format`: formats with Prettier
-- `npm run format:check`: checks formatting
-- `npm run typecheck`: verifies type safety
-- `npm run knip`: analyzes unused dependencies and files
+- `pnpm lint`: checks lint errors
+- `pnpm lint:fix`: auto-fixes fixable lint issues and formats
+- `pnpm lint:ci`: runs lint in CI mode (no warnings allowed) and checks formatting
+- `pnpm format`: formats with Prettier
+- `pnpm format:check`: checks formatting
+- `pnpm typecheck`: verifies type safety
+- `pnpm knip`: analyzes unused dependencies and files
 
 ### Git hooks
 
-- `npm run prepare`: sets up git hooks via Husky
+- `pnpm prepare`: sets up git hooks via Husky
 
 ### Bundle Analyzer
 
 To analyze build outputs:
 
-- `npm run analyze`: analyzes bundle sizes and opens the report
+- `pnpm analyze`: analyzes bundle sizes and opens the report
 
 ### Conventional Commits
 
 This project enforces the Conventional Commits specification. All commit messages must follow the standard. You can use the interactive CLI:
 
 ```bash
-npm run commit
+pnpm commit
 ```
 
 Benefits include automatic release notes and semantic versioning based on commit types.
